@@ -1,7 +1,7 @@
 import random
 
 #anzahl der runden
-match_count = int(input("Wählen sie eine beliebige anzahl an Spielen aus: "))
+match_count = int(input("Wählen sie eine beliebige Anzahl an Spielen aus: "))
 
 #gespielte runden
 played_games = 0
@@ -27,7 +27,7 @@ while played_games < match_count:
         #if choice not in ["Schere", "Stein", "Papier"]:
         if (choice != "Schere" and choice != "Stein" and choice != "Papier"):
             print("")
-            print("Ihre auswahl ist falsch geschrieben geben sie es bitte erneut ein")
+            print("Ihre Auswahl ist falsch geschrieben, geben sie es bitte erneut ein!")
             print("")
         else:
             nummbers_of_controls += 1
@@ -37,21 +37,21 @@ while played_games < match_count:
         print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Unentschieden|")
 
     elif((pc_choice == "Stein") & (choice == "Schere")):
-        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler verliehrt|")
+        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler verliert|")
 
     elif((pc_choice == "Schere") & (choice == "Papier")):
-        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler verliehrt|")
+        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler verliert|")
 
     elif((pc_choice == "Papier") & (choice == "Stein")):
-        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler verliehrt|")
+        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler verliert|")
 
     else:
-        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler gewint|")
+        print("Pc nimmt [" + pc_choice + "] und Spieler [" + choice + "] = |Spieler gewinnt|")
 
     #Anzahl gespielter runden + 1
     played_games += 1
 
     #Wie viel runden noch den spieler übrig stehen
     print("")
-    print("Du hast schon [" + str(played_games) + "] von [" + str(match_count) + "] Runden gespielt, dir blieben noch [" + str(match_count - played_games) + "] !")
+    print("Du hast schon [" + str(played_games) + "] von [" + str(match_count) + "] Runden gespielt, dir blieben noch [" + str(match_count - played_games) + "] Runden!")
     print("")
