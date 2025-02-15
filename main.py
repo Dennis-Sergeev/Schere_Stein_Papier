@@ -26,7 +26,9 @@ while played_games < match_count:
         choice = input("Schere, Stein oder Papier? ")
         #if choice not in ["Schere", "Stein", "Papier"]:
         if (choice != "Schere" and choice != "Stein" and choice != "Papier"):
+            print("")
             print("Ihre auswahl ist falsch geschrieben geben sie es bitte erneut ein")
+            print("")
         else:
             nummbers_of_controls += 1
 
