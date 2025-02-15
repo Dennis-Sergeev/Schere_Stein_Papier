@@ -1,18 +1,18 @@
 import random
 
-#anzahl der runden
+#Anzahl der Runden
 match_count = int(input("Wählen sie eine beliebige Anzahl an Spielen aus: "))
 
-#gespielte runden
+#Gespielte Runden
 played_games = 0
 
-#wen die gespielte rundenanzahl kleiner ist als die ausgewählte runden anzahl, spielt man weiter
+#Wenn die gespielte Rundenanzahl kleiner ist als die ausgewählte Rundenanzahl, spielt man weiter
 while played_games < match_count:
 
-    #Der Pc wählt eine spiel möglichkeit aus
+    #Der PC wählt eine Spielmöglichkeit aus
     pc_random = random.randint(0,2)
 
-    #Konvertiert die Spielmöglichkeit des Pc´s in ein Wort
+    #Konvertiert die Spielmöglichkeit des PCs in ein Wort
     if(pc_random == 0):
         pc_choice = "Schere"
     elif(pc_random == 1):
@@ -20,7 +20,7 @@ while played_games < match_count:
     else:
         pc_choice = "Papier"
 
-    #Kontroliert das die wahl richtig geschrieben wird
+    #Kontroliert, dass die Wahl richtig geschrieben wird
     nummbers_of_controls = 0
     while(nummbers_of_controls < 1):
         choice = input("Schere, Stein oder Papier? ")
@@ -51,7 +51,7 @@ while played_games < match_count:
     #Anzahl gespielter runden + 1
     played_games += 1
 
-    #Wie viel runden noch den spieler übrig stehen
+    #Zeigt dem Spieler an, wie viele Runden noch dem Spieler zur Verfügung stehen
     print("")
     print("Du hast schon [" + str(played_games) + "] von [" + str(match_count) + "] Runden gespielt, dir blieben noch [" + str(match_count - played_games) + "] Runden!")
     print("")
